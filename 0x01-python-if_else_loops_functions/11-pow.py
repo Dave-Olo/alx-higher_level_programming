@@ -1,4 +1,4 @@
-#/bash/usr/bin/python
+#!/bash/usr/bin/python
 def pow(a, b):
     result = a ** b
     return result
