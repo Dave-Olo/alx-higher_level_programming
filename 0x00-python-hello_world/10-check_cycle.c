@@ -1,18 +1,29 @@
-#include "lists.h"
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
+
 /**
-* check_cycle - function
-* @list: list to check
-*
-* Description: function to check list if there is a cycle
-* Return: 0 if no cycle, 1 if cycle
-*/
+ * check_cycle - count the cycle
+ * @list: input
+ * Return: 0 if ok and 1 if not
+ */
+
 int check_cycle(listint_t *list)
 {
-	if (list == 0)
+
+	listint_t *current;
+
+	if (list)
+	{
+		while (list != NULL)
+		{
+			current = list;
+			list = list->next;
+			if (current <= list)
+				return (1);
+		}
 		return (0);
-	else
-		return (1);
+	}
+	return (0);
+
 }
