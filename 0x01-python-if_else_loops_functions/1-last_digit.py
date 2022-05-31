@@ -14,4 +14,4 @@ if last_digit > 5:
 elif last_digit == 0:
     print(f"{str1} {number:d} is {last_digit:d} {zero}")
 else:
-    print(f"{str1} {number:d} is {last_digit:d} {less_than}")   
+    print(f"{str1} {number:d} is {last_digit:d} {less_than}")
